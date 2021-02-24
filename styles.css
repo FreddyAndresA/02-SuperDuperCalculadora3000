@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+::selection {
+    background-color: #ff3077;
+}
+
+body {
+    height: 100vh;
+    background-color: #091921;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculadora {
+    min-width: 25rem;
+    display: grid;
+}
+
+.pantalla {
+    grid-column: span 4;
+    height: 7rem;
+    padding: 1rem;
+    font-size: 1.25rem;
+    text-align: right;
+    border: none;
+    outline: none;
+}
+
+.tecla {
+    display: grid;
+    place-items: center;
+    height: 5rem;
+    color: #fff;
+    background-color: #0c2835;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tecla:active {
+    background-color: #74ff3b;
+    color: #111;
+}
+
+.limpiar {
+    grid-column: span 2;
+    background-color: #ff3077;
+}
+
+.operacion {
+    background-color: #03b1ff;
+}
+
+.autor {
+    position: absolute;
+    bottom: 1rem;
+    color: #fff;
+}
+
+.autorNombre {
+    font-weight: 600;
+}
+
+@media screen and (max-width: 800px) {
+
+    body {
+        height: initial;
+    }
+
+    .calculadora {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 97vh;
+        overflow: hidden;
+    }
+
+    .pantalla {
+        height: auto;
+    }
+
+    .tecla {
+        height: auto;
+        min-width: 25%;
+    }
+
+    .autor {
+        position: relative;
+        bottom: 0;
+    }
+}
+
+/* Lineas a eliminar cuando se ponga serio jejejeje: */
+body {
+    flex-direction: column;
+}
+
+.titulo {
+    font-size: 4rem;
+    color: #fff;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    .titulo {
+        display: none;
+    }
+}
+/* Lineas a eliminar cuando se ponga serio jejejeje: */
